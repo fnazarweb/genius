@@ -8,22 +8,37 @@
   box-sizing: border-box;
 }
 
-.flex-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.container {
+  padding: 30px;
+  border: 1px dotted black;
 }
 
-.item {
-  flex-basis: 100px;
-  height: 100px;
-  background-color: burlywood;
-  padding: 10px;
-  border: 6px solid darkred;
-  margin: 10px;
+.parent {
+  padding: 20px;
+  border: 1px dotted black;
+}
 
+.item.red {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background-color: red;
+  color: white;
+  overflow: auto;
   /* flex: 0 1 auto; flex-grow, flex-shrink, flex-basis */
   /* padding: 16px 42px; */
+}
+
+.item.green {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+}
+
+.item.blue {
+  width: 50px;
+  height: 50px;
+  background-color: blue;
 }
 
 /* .box:nth-child(even) {
@@ -31,3 +46,9 @@
 }
  */
 /* flex-grow: 0;  так поводить себе елемент якщо в контейнері є вільне місце */
+
+.section-title {
+  position: sticky;
+
+  background-color: burlywood;
+}
