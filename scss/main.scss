@@ -1,87 +1,16 @@
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-weight: 300;
-  src: url('../fonts/poppins-v24-latin-300.woff2') format('woff2');
-}
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-weight: 400;
-  src: url('../fonts/poppins-v24-latin-regular.woff2') format('woff2');
-}
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-weight: 600;
-  src: url('../fonts/poppins-v24-latin-600.woff2') format('woff2');
-}
-@font-face {
-  font-display: swap;
-  font-family: 'Poppins';
-  font-weight: 900;
-  src: url('../fonts/poppins-v24-latin-900.woff2') format('woff2');
-}
+@import './utils/fonts';
+@import './utils/variables';
+@import './base';
+@import './utils/utils';
 
-:root {
-  --color-primary-dark: #31261a;
-  --color-primary-light: #faf4ea;
-  --color-secondary-dark: #a18268;
-  --color-brand-dark: #465929;
-  --color-brand-normal: #819b57;
-  --color-brand-light: #cfcfbc;
-}
+@import './components/advantages-section';
+@import './components/buttons';
+@import './components/header';
+@import './components/hero-section';
+@import './components/links';
+@import './components/tradition-section';
 
-/* Base */
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-}
-
-body {
-  color: var(--color-primary-dark);
-  background-color: var(--color-primary-light);
-  font-family: 'Poppins', sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5; /* 1.5 - у стільки разів висота рядку більша за розмір шрифту (27px / 18px) */
-  margin: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin-top: 0;
-}
-
-a {
-  display: inline-block;
-}
-
-address {
-  font-style: normal;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
+@import './utils/mixins';
 
 .section {
   padding: 48px 0;
@@ -92,164 +21,6 @@ ul {
   max-width: 1288px;
   margin: 0 auto;
   padding: 0 24px;
-}
-
-/* Button */
-.button {
-  padding: 16px 32px;
-  font-weight: 600;
-  color: var(--color-primary-light);
-  background-color: var(--color-brand-normal);
-  border: 2px solid var(--color-brand-normal);
-  border-radius: 8px;
-}
-
-.button:hover {
-  background-color: transparent;
-  color: var(--color-brand-dark);
-}
-
-/* .button:focus {
-  background-color: var(--color-brand-light);
-} */
-
-/* .button:disabled {
-  color: gray;
-  background-color: lightgray;
-  border-color: currentColor;
-  cursor: not-allowed;
-} */
-
-/* Link */
-.link {
-  color: var(--color-primary-light);
-  text-decoration: none;
-  transition: color 0.4s;
-}
-
-.link:hover {
-  color: var(--color-brand-normal);
-}
-
-/* Header */
-.header {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  padding-top: 32px;
-}
-
-.header-container {
-  display: flex;
-  align-items: center;
-  gap: 40px;
-}
-
-.header-nav {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  gap: 40px;
-}
-
-.header-menu {
-  display: flex;
-  gap: 64px; /* Відступи між елементами всередині */
-  flex-grow: 1;
-  justify-content: center;
-}
-
-/* Hero section */
-.hero-section {
-  padding: 272px 0;
-  background-image:
-    linear-gradient(
-      102.76deg,
-      rgba(18, 18, 17, 0.78) 2.03%,
-      rgba(18, 18, 17, 0.6) 58.46%,
-      rgba(18, 18, 17, 0) 90.36%
-    ),
-    url('../images/hero-section-background.jpg');
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
-}
-
-.hero-title {
-  color: var(--color-primary-light);
-  text-align: center;
-  font-size: 128px;
-  font-weight: 900;
-  margin-bottom: 0;
-}
-
-.hero-title .accent {
-  color: var(--color-brand-normal);
-}
-
-/* Advantages section */
-.advantages-section {
-  padding: 16px 0;
-  background-color: var(--color-brand-normal);
-}
-
-.advantages-list {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.advantages-item {
-  color: var(--color-primary-light);
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.section-title {
-  font-weight: 900;
-  font-size: 62px;
-  line-height: 1.3;
-}
-
-.section-title.centered {
-  text-align: center;
-}
-
-.section-title .accent {
-  color: var(--color-brand-dark);
-}
-
-/* Traditions section */
-.traditions-section {
-  padding-top: 96px;
-}
-
-.traditions-container {
-  display: flex;
-  justify-content: space-between;
-  gap: 40px;
-}
-
-.traditions-content {
-  max-width: 710px;
-}
-
-.traditions-title {
-  margin-bottom: 42px;
-}
-
-.traditions-text .brand {
-  color: var(--color-brand-normal);
-  font-weight: 600;
-}
-
-.traditions-text .uppercase {
-  text-transform: uppercase;
-}
-
-.traditions-text.limited {
-  max-width: 335px;
 }
 
 /* Chef section */
@@ -330,6 +101,10 @@ ul {
 }
 
 .format-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   height: 444px;
   padding: 24px;
   background-image: linear-gradient(
@@ -338,13 +113,21 @@ ul {
     rgba(49, 38, 26, 0.71) 72.92%,
     var(--color-primary-dark) 100%
   );
-  border: 1px solid lightgray; /*remove*/
   border-radius: 16px;
   transition: transform 0.3s;
 }
 
 .format-card:hover {
   transform: scale(1.05);
+}
+
+.format-image {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .formats-title {
@@ -354,11 +137,13 @@ ul {
 .format-title {
   font-size: 24px;
   font-weight: 600;
+  color: var(--color-primary-light);
 }
 
 .format-text {
   font-size: 14px;
   font-weight: 600;
+  color: var(--color-primary-light);
 }
 
 /* Carousel */
