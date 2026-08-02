@@ -3,7 +3,11 @@
   left: 0;
   top: 0;
   width: 100%;
-  padding-top: 32px;
+  padding-top: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
+    padding-top: 32px;
+  }
 
   &__container {
     display: flex;
@@ -19,9 +23,33 @@
   }
 
   &__menu {
-    display: flex;
-    gap: 64px; /* Відступи між елементами всередині */
-    flex-grow: 1;
-    justify-content: center;
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 64px; /* Відступи між елементами всередині */
+      flex-grow: 1;
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    display: none;
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    fill: var(--color-primary-light);
+
+    @media screen and (min-width: $bp-desktop) {
+      display: none;
+    }
   }
 }
