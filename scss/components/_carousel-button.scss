@@ -11,13 +11,13 @@
   background-color: transparent;
   border: 1px solid var(--color-primary-dark);
   cursor: pointer;
-}
 
-.carousel-button:hover {
-  background-color: var(--color-primary-dark);
-  fill: var(--color-primary-light);
-}
+  &:hover {
+    background-color: var(--color-primary-dark);
+    fill: var(--color-primary-light);
+  }
 
-.carousel-button.next {
-  transform: rotate(180deg);
+  &.next {
+    transform: rotate(180deg);
+  }
 }

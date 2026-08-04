@@ -1,8 +1,12 @@
 .formats-section {
-  &__container {
+  &__slider {
     display: flex;
     align-items: center;
     gap: 32px;
+  }
+
+  &__container {
+    overflow: hidden;
   }
 
   &__title {
@@ -10,12 +14,13 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    margin-bottom: 32px;
   }
 
-  &__item {
-    flex-basis: calc((100% - 40px) / 3);
+  &__button {
+    display: none;
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+    }
   }
 }
